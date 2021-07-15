@@ -6,7 +6,7 @@ Paper: [Large-Scale Topological Radar Localization Using Learned Descriptors](ht
 
 Warsaw University of Technology
 
-![Overview](media/overview.jpg)
+![Overview](media/overview.png)
 
 ### Introduction
 This work proposes a method for large-scale topological localization based on radar scan images using learned descriptors.
