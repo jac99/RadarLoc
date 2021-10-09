@@ -41,7 +41,6 @@ The following Python packages are required:
 * PyTorch (version 1.9.1)
 * MinkowskiEngine (version 0.5.4)
 * pytorch_metric_learning (version 0.9.99 or above)
-* tensorboard
 * wandb
 
 Modify the `PYTHONPATH` environment variable to include absolute path to the project root folder: 
@@ -57,7 +56,7 @@ export PYTHONPATH=$PYTHONPATH:/home/.../RadarLoc
 * Oxford Radar RobotCar dataset: sequences 2019-01-15-13-06-37-radar-oxford-10k and 2019-01-18-14-14-42-radar-oxford-10k
 are used for evaluation [link](https://oxford-robotics-institute.github.io/radar-robotcar-dataset)
 
-First, you need to download datasets using the links provided above.
+First, you need to download datasets:
 
 * For MulRan dataset you need to download ground truth data (*.csv), radar scan images (polar.zip) and 
 (optionally) LiDAR point clouds (Ouster.zip) for traversals: Sejong01, Sejong02, KAIST01, KAIST02, Riverside01, Riverside02. 
@@ -121,10 +120,10 @@ To evaluate pretrained models run the following commands:
 cd eval
 
 # Evaluate radar-based RadarLoc model
-python evaluate.py --dataset_root <dataset_root_path> --dataset <mulran|robotcar> --sensor R --model_config ../config/radarloc.txt --weights ../weights/radarloc.pth
+python evaluate.py --dataset_root <dataset_root_path> --dataset <mulran|robotcar> --sensor R --model_config ../models/radarloc.txt --weights ../weights/radarloc.pth
 
 # Evaluate lidar-based MinkLoc model
-python evaluate.py --dataset_root <dataset_root_path> --dataset <mulran|robotcar> --sensor L --model_config ../config/minkloc.txt  --weights ../weights/minkloc.pth
+python evaluate.py --dataset_root <dataset_root_path> --dataset <mulran|robotcar> --sensor L --model_config ../models/minkloc.txt  --weights ../weights/minkloc.pth
 ```
 To run evaluation with random rotations of sensor readings (to verify rotational invariance of the learned descriptor)
 use `with_rotation` parameter.
