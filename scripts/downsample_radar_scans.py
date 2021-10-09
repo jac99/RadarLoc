@@ -49,6 +49,7 @@ def downsample(dataset_root: str, dataset_type: str, size: (int, int), output_fo
             raise NotImplementedError(f"Unknown dataset type: {dataset_type}")
 
         if not os.path.exists(scan_folder):
+            print(f"Subfolder: {scan_folder} does not exists")
             continue
 
         scans = os.listdir(scan_folder)
