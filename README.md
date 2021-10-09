@@ -130,7 +130,7 @@ use `with_rotation` parameter.
 
 ## Results
 
-**RadarLoc** performance, measured by Average Recall@1 with *5m. threshold*:
+**RadarLoc** performance, measured by Average Recall@1 with **5m. threshold**:
 
 | Method         | Sejong | KAIST | Riverside | Radar RobotCar |
 | ------------------ |---------------- | -------------- |---|---|
@@ -140,7 +140,7 @@ use `with_rotation` parameter.
 | **RadarLoc (our)**  |     **0.929**     |   0.959 | 0.744 | 0.949 |
 
 
-**RadarLoc** performance, measured by Average Recall@1 with *10m. threshold*:
+**RadarLoc** performance, measured by Average Recall@1 with **10m. threshold**:
 
 | Method         | Sejong | KAIST | Riverside | Radar RobotCar |
 | ------------------ |---------------- | -------------- |---|---|
