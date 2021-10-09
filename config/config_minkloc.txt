@@ -1,0 +1,24 @@
+[DEFAULT]
+dataset=Mulran
+dataset_folder = /data3/mulran
+
+[TRAIN]
+num_workers = 4
+batch_size = 32
+batch_size_limit = 64
+batch_expansion_rate = 1.4
+batch_expansion_th = 0.7
+
+lr = 1e-3
+epochs = 60
+scheduler_milestones = 30
+aug_mode = 2
+weight_decay = 1e-4
+loss = BatchHardTripletMarginLoss
+margin = 0.2
+
+train_file = train_L_Sejong01_Sejong02_5_20.pickle
+val_file = val_L_Sejong01_Sejong02_5_20.pickle
+
+test_file = test_L_Sejong01_Sejong02_384_128.pickle
+
