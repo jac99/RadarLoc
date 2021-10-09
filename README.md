@@ -75,7 +75,7 @@ After loading datasets you need to:
 and for evaluation of ScanContext method (scans are downsampled to 120x40 resolution). 
 Run `python downsample_radar_scans.py --dataset_root <dataset_root_path> --dataset <mulran|robotcar>` script in `scripts` folder. 
 Run the script twice to process two datasets (MulRan and Radar RobotCar). 
-Downsampled radar scans will be saved as .png images in `polar_384_128` and `polar_120_40` subolfers in each traversal.
+Downsampled radar scans will be saved as .png images in `polar_384_128` and `polar_120_40` subfolders in each traversal.
 2. **Generate training pickles** needed for the network training. These pickles are based on a training split of 
 Sejong01 and Sejong02 traversals in MulRan dataset.
 Run `python generate_training_tuples.py --dataset_root <mulran_dataset_root_path>` script in `datasets/mulran` folder. Use default values for 

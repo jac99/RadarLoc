@@ -48,6 +48,9 @@ def downsample(dataset_root: str, dataset_type: str, size: (int, int), output_fo
         else:
             raise NotImplementedError(f"Unknown dataset type: {dataset_type}")
 
+        if not os.path.exists(scan_folder):
+            continue
+
         scans = os.listdir(scan_folder)
         scans = [os.path.join(scan_folder, e) for e in scans]
         scans = [e for e in scans if os.path.isfile(e) and os.path.splitext(e)[1] == '.png']
