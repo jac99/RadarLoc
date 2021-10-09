@@ -173,12 +173,12 @@ if __name__ == "__main__":
     if args.sensor == "R":
         # Radar-based evaluation sets
         assert model_params.radar_model is not None
-        eval_sets = [e for e in eval_sets if e[5:] == 'test_' and e.endswith('384_128.pickle') and '_R_' in e]
+        eval_sets = [e for e in eval_sets if e.startswith('test_') and e.endswith('384_128.pickle') and '_R_' in e]
         quantizer = None
     elif args.sensor == "L":
         # LiDAR-based evaluation sets
         assert model_params.lidar_model is not None
-        eval_sets = [e for e in eval_sets if e[5:] == 'test_' and '_L_' in e]
+        eval_sets = [e for e in eval_sets if e.startswith('test_') and '_L_' in e]
         quantizer = model_params.lidar_quantizer
     else:
         raise NotImplementedError(f"Unknown sensor: {args.sensor}")
