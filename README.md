@@ -64,7 +64,7 @@ First, you need to download datasets using the links provided above.
 Use this [link](https://sites.google.com/view/mulran-pr/download).
 * For Oxford Radar RobotCar you need to download ground truth (ins.csv) radar scan images and
 (optionally) LiDAR point clouds (velodyne_left) for traversals: 
-2019-01-15-13-06-37-radar-oxford-10k and 2019-01-18-14-14-42-radar-oxford-10k
+2019-01-15-13-06-37-radar-oxford-10k and 2019-01-18-14-14-42-radar-oxford-10k.
 Use this [link](https://oxford-robotics-institute.github.io/radar-robotcar-dataset/downloads#download-script).
 
 LiDAR point clouds are needed only if you want to train or evaluate point cloud-based descriptor. 
@@ -73,7 +73,8 @@ For radar-based descriptor (RadarLoc), point clouds are not needed.
 After loading datasets you need to:
 1. Generate downsampled radar scan images for training/evaluation of our RadarLoc method (scans are downsampled to 384x128 resolution)
 and (optionally) for evaluation of ScanContext method (scans are downsampled to 120x40 resolution). 
-Run `downsample_radar_scans.py` script in scripts folder. Run the script for each dataset  (MulRan and RobotCar Radar). 
+Run `downsample_radar_scans.py --dataset_root <dataset_root_path> --dataset <mulran|robotcar>` script in `scripts` folder. 
+Run the script twice to process two datasets (MulRan and RobotCar Radar). 
 Downsampled radar scans will be saved as .png images in `polar_384_128` and `polar_120_40` subolfers in each traversal.
 2. Generate training pickles, used during the network training process. These pickles are based on a training split of 
 Sejong01 and Sejong02 traversals in MulRan dataset.
