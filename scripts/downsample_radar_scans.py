@@ -84,3 +84,5 @@ if __name__ == '__main__':
         output_folder = f"polar_{width}_{height}"
         print(f"Rescaling to: {width} x {height} (width x height)")
         downsample(args.dataset_root, args.dataset, (width, height), output_folder)
+        print('')
+

@@ -71,18 +71,18 @@ LiDAR point clouds are needed only if you want to train or evaluate point cloud-
 For radar-based descriptor (RadarLoc), point clouds are not needed.
 
 After loading datasets you need to:
-1. Generate downsampled radar scan images for training/evaluation of our RadarLoc method (scans are downsampled to 384x128 resolution)
+1. **Generate downsampled radar scan images** for training/evaluation of our RadarLoc method (scans are downsampled to 384x128 resolution)
 and for evaluation of ScanContext method (scans are downsampled to 120x40 resolution). 
 Run `python downsample_radar_scans.py --dataset_root <dataset_root_path> --dataset <mulran|robotcar>` script in `scripts` folder. 
-Run the script twice to process two datasets (MulRan and RobotCar Radar). 
+Run the script twice to process two datasets (MulRan and Radar RobotCar). 
 Downsampled radar scans will be saved as .png images in `polar_384_128` and `polar_120_40` subolfers in each traversal.
-2. Generate training pickles, used during the network training process. These pickles are based on a training split of 
+2. **Generate training pickles** needed for the network training. These pickles are based on a training split of 
 Sejong01 and Sejong02 traversals in MulRan dataset.
 Run `python generate_training_tuples.py --dataset_root <mulran_dataset_root_path>` script in `datasets/mulran` folder. Use default values for 
 other parameters. It'll create training data in the dataset root folder for training radar-based RadarLoc descriptor (`train_R_Sejong01_Sejong02_5_20.pickle`, `val_R_Sejong01_Sejong02_5_20.pickle`)
 and LiDAR-based descriptor (`train_L_Sejong01_Sejong02_5_20.pickle`, `val_L_Sejong01_Sejong02_5_20.pickle`).
-These pickles contain a list of positives (similar locations) and non-negatives for each sensor reading (radar scan or LiDAR point cloud).
-3. Generate evaluation pickles, used for model evaluation. 
+The pickles contain lists of positives (similar locations) and non-negatives for each sensor reading (radar scan or LiDAR point cloud).
+3. **Generate evaluation pickles** for model evaluation. 
 Run `python generate_evaluation_sets.py --dataset_root <dataset_root_path>` script from `datasets/mulran` and `datasets/robotcar_radar`
 to generate evaluation data for each dataset. Use default values for other parameters. Evaluation pickles will be saved
 in the dataset root folder in `test_xxxxxxxxxx.pickle' files.
