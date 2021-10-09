@@ -12,7 +12,7 @@ Warsaw University of Technology
 
 ### Our other projects ###
 * MinkLoc3D: MinkLoc3D: Point Cloud Based Large-Scale Place Recognition: [MinkLoc3D](https://github.com/jac99/MinkLoc3D) 
-* MinkLoc++: Lidar and Monocular Image Fusion for Place Recognition": [MinkLoc++](https://github.com/jac99/MinkLocMultimodal)
+* MinkLoc++: Lidar and Monocular Image Fusion for Place Recognition: [MinkLoc++](https://github.com/jac99/MinkLocMultimodal)
 
 ### Introduction
 This work proposes a method for large-scale topological localization based on radar scan images using learned 
