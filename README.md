@@ -72,7 +72,7 @@ For radar-based descriptor (RadarLoc), point clouds are not needed.
 
 After loading datasets you need to:
 1. Generate downsampled radar scan images for training/evaluation of our RadarLoc method (scans are downsampled to 384x128 resolution)
-and (optionally) for evaluation of ScanContext method (scans are downsampled to 120x40 resolution). 
+and for evaluation of ScanContext method (scans are downsampled to 120x40 resolution). 
 Run `downsample_radar_scans.py --dataset_root <dataset_root_path> --dataset <mulran|robotcar>` script in `scripts` folder. 
 Run the script twice to process two datasets (MulRan and RobotCar Radar). 
 Downsampled radar scans will be saved as .png images in `polar_384_128` and `polar_120_40` subolfers in each traversal.
