@@ -137,7 +137,7 @@ use `with_rotation` parameter.
 | Ring key [1] |     0.503     |   0.805 | 0.497 | 0.747 |
 | ScanContext [1] |     0.868     |   0.935 | 0.671 | 0.906 |
 | VGG-16/NetVLAD |     0.789     |   0.885 | 0.613 | 0.883 |
-| **RadarLoc (our)**  |     **0.929**     |   0.959 | 0.744 | 0.949 |
+| **RadarLoc (our)**  |     **0.929**     |   **0.959** | **0.744** | **0.949** |
 
 
 **RadarLoc** performance, measured by Average Recall@1 with **10m. threshold**:
@@ -147,7 +147,7 @@ use `with_rotation` parameter.
 | Ring key [1] |     0.594     |   0.848 | 0.595 | 0.786 |
 | ScanContext [1] |     0.879     |   0.946 | 0.772 | 0.933 |
 | VGG-16/NetVLAD |     0.938     |   0.937 | 0.834 | 0.939 |
-| **RadarLoc (our)**  |     **0.988**     |   0.988 | 0.923 | 0.981 |
+| **RadarLoc (our)**  | **0.988**  | **0.988** | **0.923** | **0.981** |
 
 1. G. Kim, A. Kim, "Scan context: Egocentric spatial descriptor for place recognition within 3d point cloud map", 2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
 
