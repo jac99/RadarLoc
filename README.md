@@ -8,9 +8,9 @@ accepted for 2021 International Conference on Neural Information Processing (ICO
 Warsaw University of Technology
 
 ### What's new ###
-* [2021-10-09] Code and pre-trained models are released. 
+* [2021-10-09] Code and pre-trained models released. 
 
-### Other projects ###
+### Our other projects ###
 * MinkLoc3D: MinkLoc3D: Point Cloud Based Large-Scale Place Recognition: [MinkLoc3D](https://github.com/jac99/MinkLoc3D) 
 * MinkLoc++: Lidar and Monocular Image Fusion for Place Recognition": [MinkLoc++](https://github.com/jac99/MinkLocMultimodal)
 
