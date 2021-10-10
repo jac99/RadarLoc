@@ -10,8 +10,8 @@ batch_expansion_rate = 1.4
 batch_expansion_th = 0.7
 
 lr = 1e-3
-epochs = 60
-scheduler_milestones = 30
+epochs = 80
+scheduler_milestones = 50
 aug_mode = 2
 weight_decay = 1e-4
 loss = BatchHardTripletMarginLoss
