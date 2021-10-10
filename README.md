@@ -130,7 +130,7 @@ use `with_rotation` parameter.
 
 ## Results
 
-**RadarLoc** performance, measured by Average Recall@1 with **5m. threshold**:
+**RadarLoc** performance (*radarloc.pth* model), measured by Average Recall@1 with **5m. threshold**:
 
 | Method         | Sejong | KAIST | Riverside | Radar RobotCar |
 | ------------------ |---------------- | -------------- |---|---|
@@ -140,7 +140,7 @@ use `with_rotation` parameter.
 | **RadarLoc (our)**  |     **0.929**     |   **0.959** | **0.744** | **0.949** |
 
 
-**RadarLoc** performance, measured by Average Recall@1 with **10m. threshold**:
+**RadarLoc** performance (*radarloc.pth* model), measured by Average Recall@1 with **10m. threshold**:
 
 | Method         | Sejong | KAIST | Riverside | Radar RobotCar |
 | ------------------ |---------------- | -------------- |---|---|
@@ -148,6 +148,14 @@ use `with_rotation` parameter.
 | ScanContext [1] |     0.879     |   0.946 | 0.772 | 0.933 |
 | VGG-16/NetVLAD |     0.938     |   0.937 | 0.834 | 0.939 |
 | **RadarLoc (our)**  | **0.988**  | **0.988** | **0.923** | **0.981** |
+
+Performance of radar-based (RadarLoc) and LiDAR-based (MinkLoc) topological localization. 
+Table shows Average Recall@1 with 10m. threshold.
+
+| Method         | Sejong | KAIST | Riverside | 
+| ------------------ |---------------- | -------------- |---|
+| RadarLoc (*radarloc.pth*) | 0.988  | 0.988 | 0.923 |
+| MinkLoc (*minkloc.pth*) |     |    |    |
 
 1. G. Kim, A. Kim, "Scan context: Egocentric spatial descriptor for place recognition within 3d point cloud map", 2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
 
