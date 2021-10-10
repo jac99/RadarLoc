@@ -1,5 +1,7 @@
 [MODEL]
 lidar_model = minkloc
-lidar_coordinates = polar
+lidar_coordinates = cartesian
+lidar_quantization_step = 0.3
+#lidar_coordinates = polar
 # Quantization steps for sectors (in degrees), rings (in meters) and z coordinate (in meters)
-lidar_quantization_step = 1., 0.3, 0.2
+#lidar_quantization_step = 1., 0.3, 0.2

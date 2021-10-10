@@ -152,11 +152,15 @@ use `with_rotation` parameter.
 
 Comparison of radar-based (RadarLoc) and LiDAR-based (MinkLoc) topological localization. 
 Table shows Average Recall@1 with 10m. threshold.
+**Note:** LiDAR-based model (MinkLoc) is an improved version of our previous MinkLoc3D model [MinkLoc3D](https://github.com/jac99/MinkLoc3D),
+optimized for larger point clouds from a rotating 3D LiDAR. The model depth is increased and 
+channel attention mechanism (Efficient Channel Attention) is used.
+
 
 | Method         | Sejong | KAIST | Riverside | 
 | ------------------ |---------------- | -------------- |---|
 | RadarLoc (*radarloc.pth*) | 0.988  | 0.988 | 0.923 |
-| MinkLoc (*minkloc.pth*) |     |    |    |
+| MinkLoc (*minkloc.pth*) | 0.985 |  0.938  | 0.884 |
 
 1. G. Kim, A. Kim, "Scan context: Egocentric spatial descriptor for place recognition within 3d point cloud map", 2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
 
