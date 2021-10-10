@@ -10,7 +10,7 @@ batch_expansion_rate = 1.4
 batch_expansion_th = 0.7
 
 lr = 1e-3
-epochs = 100
+epochs = 120
 scheduler_milestones = 80
 aug_mode = 2
 weight_decay = 1e-3
