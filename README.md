@@ -130,7 +130,7 @@ use `with_rotation` parameter.
 
 ## Results
 
-**RadarLoc** (*radarloc.pth*) performance, measured by Average Recall@1 with **5m. threshold**:
+**RadarLoc** (*radarloc.pth*) performance, measured by Average Recall@1 with **5m. threshold**.
 
 | Method         | Sejong | KAIST | Riverside | Radar RobotCar |
 | ------------------ |---------------- | -------------- |---|---|
@@ -140,7 +140,7 @@ use `with_rotation` parameter.
 | **RadarLoc (our)**  |     **0.929**     |   **0.959** | **0.744** | **0.949** |
 
 
-**RadarLoc** (*radarloc.pth*) performance, measured by Average Recall@1 with **10m. threshold**:
+**RadarLoc** (*radarloc.pth*) performance, measured by Average Recall@1 with **10m. threshold**.
 
 | Method         | Sejong | KAIST | Riverside | Radar RobotCar |
 | ------------------ |---------------- | -------------- |---|---|
@@ -149,7 +149,7 @@ use `with_rotation` parameter.
 | VGG-16/NetVLAD |     0.938     |   0.937 | 0.834 | 0.939 |
 | **RadarLoc (our)**  | **0.988**  | **0.988** | **0.923** | **0.981** |
 
-Performance of radar-based (RadarLoc) and LiDAR-based (MinkLoc) topological localization. 
+Comparison of radar-based (RadarLoc) and LiDAR-based (MinkLoc) topological localization. 
 Table shows Average Recall@1 with 10m. threshold.
 
 | Method         | Sejong | KAIST | Riverside | 
