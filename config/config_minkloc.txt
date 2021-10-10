@@ -20,5 +20,5 @@ margin = 0.2
 train_file = train_L_Sejong01_Sejong02_5_20.pickle
 val_file = val_L_Sejong01_Sejong02_5_20.pickle
 
-test_file = test_L_Sejong01_Sejong02_384_128.pickle
+test_file = test_L_Sejong01_Sejong02.pickle
 
