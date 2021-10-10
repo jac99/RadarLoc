@@ -153,7 +153,7 @@ use `with_rotation` parameter.
 ### Comparison of radar-based (RadarLoc) and LiDAR-based (MinkLoc) topological localization. 
 Below table shows Average Recall@1 with 10m. threshold.
 
-**Note:** LiDAR-based model (MinkLoc) is an improved version of our previous MinkLoc3D model [MinkLoc3D](https://github.com/jac99/MinkLoc3D),
+**Note:** LiDAR-based model (MinkLoc) is an improved version of our previous MinkLoc3D model [(MinkLoc3D)](https://github.com/jac99/MinkLoc3D),
 optimized for larger point clouds from a rotating 3D LiDAR. The model depth is increased and 
 channel attention mechanism (Efficient Channel Attention) is used.
 
