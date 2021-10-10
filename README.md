@@ -15,7 +15,7 @@ Warsaw University of Technology
 * MinkLoc++: Lidar and Monocular Image Fusion for Place Recognition (IJCNN 2021): [MinkLoc++](https://github.com/jac99/MinkLocMultimodal)
 
 ### Introduction
-This work proposes a method for large-scale topological localization based on radar scan images using learned 
+This work proposes a method for **large-scale topological localization based on radar scan images** using learned 
 descriptors. We present a simple yet efficient deep network architecture to compute a rotationally invariant 
 discriminative global descriptor from a radar scan image. The performance and generalization ability of the 
 proposed method is experimentally evaluated on two large scale driving datasets: MulRan and Oxford Radar RobotCar. 
