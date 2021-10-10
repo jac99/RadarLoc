@@ -150,8 +150,9 @@ use `with_rotation` parameter.
 | VGG-16/NetVLAD |     0.938     |   0.937 | 0.834 | 0.939 |
 | **RadarLoc (our)**  | **0.988**  | **0.988** | **0.923** | **0.981** |
 
-Comparison of radar-based (RadarLoc) and LiDAR-based (MinkLoc) topological localization. 
-Table shows Average Recall@1 with 10m. threshold.
+###Comparison of radar-based (RadarLoc) and LiDAR-based (MinkLoc) topological localization. 
+Below table shows Average Recall@1 with 10m. threshold.
+
 **Note:** LiDAR-based model (MinkLoc) is an improved version of our previous MinkLoc3D model [MinkLoc3D](https://github.com/jac99/MinkLoc3D),
 optimized for larger point clouds from a rotating 3D LiDAR. The model depth is increased and 
 channel attention mechanism (Efficient Channel Attention) is used.
