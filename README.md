@@ -75,25 +75,25 @@ After loading datasets you need to:
 and for evaluation of ScanContext method (scans are downsampled to 120x40 resolution). 
 Run `python downsample_radar_scans.py --dataset_root <dataset_root_path> --dataset <mulran|robotcar>` script in `scripts` folder. 
 Run the script twice to process two datasets (MulRan and Radar RobotCar). 
-Downsampled radar scans will be saved as .png images in `polar_384_128` and `polar_120_40` subfolders in each traversal.
+Downsampled radar scans will be saved as .png images in *polar_384_128* and *polar_120_40* subfolders in each traversal.
 2. **Generate training pickles** needed for the network training. These pickles are based on a training split of 
 Sejong01 and Sejong02 traversals in MulRan dataset.
-Run `python generate_training_tuples.py --dataset_root <mulran_dataset_root_path>` script in `datasets/mulran` folder. Use default values for 
-other parameters. It'll create training data in the dataset root folder for training radar-based RadarLoc descriptor (`train_R_Sejong01_Sejong02_5_20.pickle`, `val_R_Sejong01_Sejong02_5_20.pickle`)
-and LiDAR-based descriptor (`train_L_Sejong01_Sejong02_5_20.pickle`, `val_L_Sejong01_Sejong02_5_20.pickle`).
+Run `python generate_training_tuples.py --dataset_root <mulran_dataset_root_path>` script in *datasets/mulran* folder. Use default values for 
+other parameters. It'll create training data in the dataset root folder for training radar-based RadarLoc descriptor (*train_R_Sejong01_Sejong02_5_20.pickle*, *val_R_Sejong01_Sejong02_5_20.pickle*)
+and LiDAR-based descriptor (*train_L_Sejong01_Sejong02_5_20.pickle*, *val_L_Sejong01_Sejong02_5_20.pickle*).
 The pickles contain lists of positives (similar locations) and non-negatives for each sensor reading (radar scan or LiDAR point cloud).
 3. **Generate evaluation pickles** for model evaluation. 
-Run `python generate_evaluation_sets.py --dataset_root <dataset_root_path>` script from `datasets/mulran` and `datasets/robotcar_radar`
+Run `python generate_evaluation_sets.py --dataset_root <dataset_root_path>` script from *datasets/mulran* and *datasets/robotcar_radar*
 to generate evaluation data for each dataset. Use default values for other parameters. Evaluation pickles will be saved
-in the dataset root folder in `test_xxxxxxxxxx.pickle' files.
+in the dataset root folder in *test_xxxxxxxxxx.pickle* files.
 
 ### Training
 The training procedure for radar-based **RadarLoc** model and LiDAR-based **MinkLoc** model is similar.
 First, download datasets and generate training and evaluation pickles as described above.
-Edit the configuration file (`config_radarloc.txt` or `config_minkloc.txt`). 
-Set `dataset_folder` parameter to point to the dataset root folder.
-Modify `batch_size_limit` parameter depending on available GPU memory. 
-Default limit (=64) in `config_minkloc.txt` for LiDAR-based model requires at least 11GB of GPU RAM.
+Edit the configuration file (*config_radarloc.txt* or *config_minkloc.txt*). 
+Set *dataset_folder* parameter to point to the dataset root folder.
+Modify *batch_size_limit* parameter depending on available GPU memory. 
+Default limit (=64) in *config_minkloc.txt* for LiDAR-based model requires at least 11GB of GPU RAM.
 
 To train the network, run:
 
@@ -109,9 +109,9 @@ python train.py --config ../config/config_minkloc.txt --model_config ../models/m
 
 ### Pre-trained Models
 
-Pretrained models are available in `weights` directory
-- `radarloc.pth` radar-based RadarLoc model 
-- `minkloc.pth` LiDAR-based MinkLoc model 
+Pretrained models are available in *weights* directory
+- *radarloc.pth* radar-based RadarLoc model 
+- *minkloc.pth* LiDAR-based MinkLoc model 
 
 ### Evaluation
 
@@ -127,7 +127,7 @@ python evaluate.py --dataset_root <dataset_root_path> --dataset <mulran|robotcar
 python evaluate.py --dataset_root <dataset_root_path> --dataset <mulran|robotcar> --sensor L --model_config ../models/minkloc.txt  --weights ../weights/minkloc.pth
 ```
 To run evaluation with random rotations of sensor readings (to verify rotational invariance of the learned descriptor)
-use `with_rotation` parameter.
+use *with_rotation* parameter.
 
 ## Results
 
@@ -155,7 +155,7 @@ use `with_rotation` parameter.
 ### Comparison of radar-based (RadarLoc) and LiDAR-based (MinkLoc) topological localization. 
 Below table shows Average Recall@1 with 10m. threshold.
 
-**Note:** LiDAR-based model (MinkLoc) is an improved version of our previous MinkLoc3D model [(MinkLoc3D)](https://github.com/jac99/MinkLoc3D),
+LiDAR-based model (MinkLoc) is an improved version of our previous MinkLoc3D model [(MinkLoc3D)](https://github.com/jac99/MinkLoc3D),
 optimized for larger point clouds from a rotating 3D LiDAR. The model depth is increased and 
 channel attention mechanism (Efficient Channel Attention) is added.
 
