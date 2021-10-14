@@ -162,7 +162,7 @@ channel attention mechanism (Efficient Channel Attention) is added.
 | Method         | Sejong | KAIST | Riverside | 
 | ------------------ |---------------- | -------------- |---|
 | RadarLoc (*radarloc.pth*) | 0.988  | 0.988 | 0.923 |
-| MinkLoc (*minkloc.pth*) | 0.985 |  0.938  | 0.884 |
+| MinkLoc (*minkloc.pth*) | 0.986 |  0.929  | 0.872 |
 
 ### License
 Our code is released under the MIT License (see LICENSE file for details).
