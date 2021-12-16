@@ -13,7 +13,8 @@ Warsaw University of Technology
 ### Our other projects ###
 * MinkLoc3D: MinkLoc3D: Point Cloud Based Large-Scale Place Recognition (WACV 2021): [MinkLoc3D](https://github.com/jac99/MinkLoc3D) 
 * MinkLoc++: Lidar and Monocular Image Fusion for Place Recognition (IJCNN 2021): [MinkLoc++](https://github.com/jac99/MinkLocMultimodal)
-* EgonNN: Egocentric Neural Network for Point Cloud Based 6DoF Relocalization at the City Scale (2021): [EgoNN](https://github.com/jac99/Egonn) 
+* EgonNN: Egocentric Neural Network for Point Cloud Based 6DoF Relocalization at the City Scale (IEEE Robotics and Automation Letters April 2022): [EgoNN](https://github.com/jac99/Egonn) 
+
 
 ### Introduction
 This work proposes a method for **large-scale topological localization based on radar scan images** using learned 
