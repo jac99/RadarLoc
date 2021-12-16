@@ -2,7 +2,7 @@
 # Warsaw University of Technology
 
 import torch
-from pytorch_metric_learning import losses
+from pytorch_metric_learning import losses, reducers
 from pytorch_metric_learning.distances import LpDistance
 from misc.utils import TrainingParams
 
@@ -73,10 +73,12 @@ def get_min_per_row(mat, mask):
 class BatchHardTripletLossWithMasks:
     def __init__(self, margin):
         self.margin = margin
-        self.distance = LpDistance(normalize_embeddings=False)
+        self.distance = LpDistance(normalize_embeddings=False, collect_stats=True)
         # We use triplet loss with Euclidean distance
         self.miner_fn = HardTripletMinerWithMasks(distance=self.distance)
-        self.loss_fn = losses.TripletMarginLoss(margin=self.margin, swap=True, distance=self.distance)
+        reducer_fn = reducers.AvgNonZeroReducer(collect_stats=True)
+        self.loss_fn = losses.TripletMarginLoss(margin=self.margin, swap=True, distance=self.distance,
+                                                reducer=reducer_fn, collect_stats=True)
 
     def __call__(self, embeddings, positives_mask, negatives_mask):
         hard_triplets = self.miner_fn(embeddings, positives_mask, negatives_mask)
