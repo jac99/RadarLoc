@@ -28,11 +28,13 @@ Additionally, we present a comparative evaluation of radar-based and LiDAR-based
 ### Citation
 If you find this work useful, please consider citing:
 
-    @article{komorowski2021radarloc,
-    title={RadarLoc: Large-Scale Topological Radar Localization Using Learned Descriptors},
+    @inproceedings{komorowski2021large,
+    title={Large-Scale Topological Radar Localization Using Learned Descriptors},
     author={Komorowski, Jacek and Wysoczanska, Monika and Trzcinski, Tomasz},
-    journal={arXiv preprint arXiv:2110.03081},
-    year={2021}
+    booktitle={International Conference on Neural Information Processing},
+    pages={451--462},
+    year={2021},
+    organization={Springer}
     }
 
 ### Environment and Dependencies
