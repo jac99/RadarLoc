@@ -1,8 +1,8 @@
 # RadarLoc: Large-Scale Topological Radar Localization Using Learned Descriptors
 
 Paper: [Large-Scale Topological Radar Localization Using Learned Descriptors](https://link.springer.com/chapter/10.1007/978-3-030-92270-2_39) 
-2021 International Conference on Neural Information Processing (ICONIP)
-[arXiv](https://arxiv.org/pdf/2110.03081.pdf
+accepted for 2021 International Conference on Neural Information Processing (ICONIP)
+[arXiv](https://arxiv.org/pdf/2110.03081.pdf)
 [Jacek Komorowski](mailto:jacek.komorowski@pw.edu.pl), Monika Wysoczanska, Tomasz Trzcinski
 
 Warsaw University of Technology
